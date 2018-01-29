@@ -115,6 +115,7 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/q2_comments"
                 style="@style/comments"
                 android:text="@string/q2_comment" />
 
@@ -214,6 +215,7 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/q4_comments"
                 style="@style/comments"
                 android:text="@string/q4_comment" />
 
@@ -324,6 +326,7 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/q6_comments"
                 style="@style/comments"
                 android:text="@string/q6_comment" />
 
@@ -430,6 +433,7 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/q8_comments"
                 style="@style/comments"
                 android:text="@string/q8_comment" />
 
@@ -467,6 +471,7 @@
                 android:inputType="number" />
 
             <TextView
+                android:id="@+id/q9_comments"
                 style="@style/comments"
                 android:text="@string/q9_comment" />
 

@@ -82,5 +82,6 @@
     <string name="results">results</string>
     <string name="image">image</string>
     <string name="guess">guess</string>
+    <string name="email">send results to email</string>
     <string name="content_description">image</string>
 </resources>
