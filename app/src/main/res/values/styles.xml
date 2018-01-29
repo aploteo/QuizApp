@@ -7,5 +7,85 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="scrollview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">@dimen/scrollview_margins</item>
+    </style>
+    <style name="question_number">
+        <item name="android:layout_width">@dimen/question_number</item>
+        <item name="android:layout_height">@dimen/question_number</item>
+        <item name="android:background">@drawable/blue_circle</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/question_number_font_size</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/question_margin</item>
+    </style>
+    <style name="linear_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/question_titles</item>
+        <item name="android:textSize">@dimen/title_textview</item>
+        <item name="android:layout_marginBottom">@dimen/general_bottom_margin</item>
+    </style>
+    <style name="image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_marginBottom">@dimen/general_bottom_margin</item>
+        <item name="android:contentDescription">@string/image</item>
+    </style>
+    <style name="intro">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/question_textview</item>
+        <item name="android:layout_marginLeft">@dimen/question_margin</item>
+        <item name="android:layout_marginBottom">@dimen/general_bottom_margin</item>
+    </style>
+    <style name="question">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/question_textview</item>
+        <item name="android:layout_marginLeft">@dimen/question_margin</item>
+        <item name="android:layout_marginBottom">@dimen/general_bottom_margin</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="radio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="hypothesis">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/question_margin</item>
+        <item name="android:textSize">@dimen/hypothesis_textview</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    <style name="comments">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="space">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+    <style name="buttons">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginTop">@dimen/hypothesis_bottom_margin</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
 </resources>

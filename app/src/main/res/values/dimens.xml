@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="scrollview_margins">16dp</dimen>
+    <dimen name="question_number_font_size">20sp</dimen>
+    <dimen name="title_textview">18sp</dimen>
+    <dimen name="question_textview">17sp</dimen>
+    <dimen name="hypothesis_textview">16sp</dimen>
+    <dimen name="comment_textview">18sp</dimen>
+    <dimen name="general_bottom_margin">20dp</dimen>
+    <dimen name="question_margin">10dp</dimen>
+    <dimen name="hypothesis_bottom_margin">10dp</dimen>
+    <dimen name="question_number">40dp</dimen>
+</resources>
