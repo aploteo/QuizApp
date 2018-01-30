@@ -10,7 +10,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
 {
-    public static final String EXTRA_MESSAGE = "com.example.android.MESSAGE";
+    public static final String EXTRA_NAME = "name";
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -21,9 +22,9 @@ public class MainActivity extends AppCompatActivity
     public void goToQuiz(View view)
     {
         Intent intent = new Intent(this, QuizActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_text);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        EditText editText = (EditText) findViewById(R.id.edit_text_name);
+        String name = editText.getText().toString();
+        intent.putExtra(EXTRA_NAME, name);
         startActivity(intent);
     }
 }

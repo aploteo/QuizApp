@@ -60,7 +60,7 @@
     <string name="q8_hyp2">Desert tortoise</string>
     <string name="q8_hyp3">Kangaroo rat</string>
     <string name="q8_hyp4">Blunt-nosed leopard lizard</string>
-    <string name="q8_comment">After finding more tortoises than anticipated, developers relocated them to a different site and set up nature preserves elsewhere with the assistance of environmental organizations. The incident illustrated why careful siting is an important part of any kind of energy development.</string>
+    <string name="q8_comment">After finding more tortoises than anticipated, developers relocated them to a different site with the assistance of environmental organizations. The incident illustrated why careful siting is an important part of any kind of energy development.</string>
     <string name="q9_title">The Arctic</string>
     <string name="q9_intro">Although the countries that comprise the Arctic nations have made policy statements underlining the importance of working together, the rapid melting now taking place in the Arctic, combined with increased militarization and tensions around resources, pose a challenge to its stability. Did you know that the U.S. is considered an Arctic nation because its territory extends into the region known as the Arctic Circle?</string>
     <string name="q9_question">Test your knowledge: How many Arctic nations are there?</string>
@@ -82,6 +82,6 @@
     <string name="results">results</string>
     <string name="image">image</string>
     <string name="guess">guess</string>
-    <string name="email">send results to email</string>
+    <string name="email">send results by email</string>
     <string name="content_description">image</string>
 </resources>

@@ -1,9 +1,11 @@
 package com.example.android.quizapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -12,8 +14,17 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class ResultActivity extends AppCompatActivity
 {
+    TextView q2Comments;
+    TextView q4Comments;
+    TextView q5Comments;
+    TextView q6Comments;
+    TextView q8Comments;
+    TextView q9Comments;
+
     ScrollView scrollView;
     RadioGroup radioGroupQ1;
     RadioGroup radioGroupQ2;
@@ -24,59 +35,104 @@ public class ResultActivity extends AppCompatActivity
     RadioGroup radioGroupQ8;
     RadioGroup radioGroupQ10;
     RadioButton radioButtonQ1Hyp1;
+    RadioButton radioButtonQ1Hyp2;
+    RadioButton radioButtonQ1Hyp3;
+    RadioButton radioButtonQ1Hyp4;
+    RadioButton radioButtonQ2Hyp1;
     RadioButton radioButtonQ2Hyp2;
-    TextView q2Comments;
+    RadioButton radioButtonQ2Hyp3;
+    RadioButton radioButtonQ2Hyp4;
     CheckBox checkBoxQ3Hyp1;
     CheckBox checkBoxQ3Hyp2;
     CheckBox checkBoxQ3Hyp3;
     CheckBox checkBoxQ3Hyp4;
     RadioButton radioButtonQ4Hyp1;
-    TextView q4Comments;
+    RadioButton radioButtonQ4Hyp2;
+    RadioButton radioButtonQ4Hyp3;
+    RadioButton radioButtonQ4Hyp4;
+    RadioButton radioButtonQ5Hyp1;
+    RadioButton radioButtonQ5Hyp2;
     RadioButton radioButtonQ5Hyp3;
-    TextView q5Comments;
+    RadioButton radioButtonQ5Hyp4;
     RadioButton radioButtonQ6Hyp1;
-    TextView q6Comments;
+    RadioButton radioButtonQ6Hyp2;
+    RadioButton radioButtonQ6Hyp3;
+    RadioButton radioButtonQ6Hyp4;
+    RadioButton radioButtonQ7Hyp1;
     RadioButton radioButtonQ7Hyp2;
+    RadioButton radioButtonQ7Hyp3;
+    RadioButton radioButtonQ7Hyp4;
+    RadioButton radioButtonQ8Hyp1;
     RadioButton radioButtonQ8Hyp2;
-    TextView q8Comments;
-    EditText editTextQ9;
-    TextView q9Comments;
+    RadioButton radioButtonQ8Hyp3;
+    RadioButton radioButtonQ8Hyp4;
+    TextView editTextQ9;
+    RadioButton radioButtonQ10Hyp1;
+    RadioButton radioButtonQ10Hyp2;
     RadioButton radioButtonQ10Hyp3;
+    RadioButton radioButtonQ10Hyp4;
     int correctAnswers;
+    int[] arrayOfAnswers;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        q2Comments = findViewById(R.id.q2_comments);
+        q4Comments = findViewById(R.id.q4_comments);
+        q5Comments = findViewById(R.id.q5_comments);
+        q6Comments = findViewById(R.id.q6_comments);
+        q8Comments = findViewById(R.id.q8_comments);
+        q9Comments = findViewById(R.id.q9_comments);
+
         scrollView = findViewById(R.id.scroll_view);
         radioGroupQ1 = findViewById(R.id.radio_group_q1);
         radioGroupQ2 = findViewById(R.id.radio_group_q2);
-        q2Comments = findViewById(R.id.q2_comments);
         radioGroupQ4 = findViewById(R.id.radio_group_q4);
-        q4Comments = findViewById(R.id.q4_comments);
         radioGroupQ5 = findViewById(R.id.radio_group_q5);
-        q5Comments = findViewById(R.id.q5_comments);
         radioGroupQ6 = findViewById(R.id.radio_group_q6);
         radioGroupQ7 = findViewById(R.id.radio_group_q7);
         radioGroupQ8 = findViewById(R.id.radio_group_q8);
         radioGroupQ10 = findViewById(R.id.radio_group_q10);
         radioButtonQ1Hyp1 = findViewById(R.id.radio_q1_h1);
+        radioButtonQ1Hyp2 = findViewById(R.id.radio_q1_h2);
+        radioButtonQ1Hyp3 = findViewById(R.id.radio_q1_h3);
+        radioButtonQ1Hyp4 = findViewById(R.id.radio_q1_h4);
+        radioButtonQ2Hyp1 = findViewById(R.id.radio_q2_h1);
         radioButtonQ2Hyp2 = findViewById(R.id.radio_q2_h2);
+        radioButtonQ2Hyp3 = findViewById(R.id.radio_q2_h3);
+        radioButtonQ2Hyp4 = findViewById(R.id.radio_q2_h4);
         checkBoxQ3Hyp1 = findViewById((R.id.check_q3_h1));
         checkBoxQ3Hyp2 = findViewById((R.id.check_q3_h2));
         checkBoxQ3Hyp3 = findViewById((R.id.check_q3_h3));
         checkBoxQ3Hyp4 = findViewById((R.id.check_q3_h4));
         radioButtonQ4Hyp1 = findViewById(R.id.radio_q4_h1);
+        radioButtonQ4Hyp2 = findViewById(R.id.radio_q4_h2);
+        radioButtonQ4Hyp3 = findViewById(R.id.radio_q4_h3);
+        radioButtonQ4Hyp4 = findViewById(R.id.radio_q4_h4);
+        radioButtonQ5Hyp1 = findViewById(R.id.radio_q5_h1);
+        radioButtonQ5Hyp2 = findViewById(R.id.radio_q5_h2);
         radioButtonQ5Hyp3 = findViewById(R.id.radio_q5_h3);
+        radioButtonQ5Hyp4 = findViewById(R.id.radio_q5_h4);
         radioButtonQ6Hyp1 = findViewById(R.id.radio_q6_h1);
-        q6Comments = findViewById(R.id.q6_comments);
+        radioButtonQ6Hyp2 = findViewById(R.id.radio_q6_h2);
+        radioButtonQ6Hyp3 = findViewById(R.id.radio_q6_h3);
+        radioButtonQ6Hyp4 = findViewById(R.id.radio_q6_h4);
+        radioButtonQ7Hyp1 = findViewById(R.id.radio_q7_h1);
         radioButtonQ7Hyp2 = findViewById(R.id.radio_q7_h2);
+        radioButtonQ7Hyp3 = findViewById(R.id.radio_q7_h3);
+        radioButtonQ7Hyp4 = findViewById(R.id.radio_q7_h4);
+        radioButtonQ8Hyp1 = findViewById(R.id.radio_q8_h1);
         radioButtonQ8Hyp2 = findViewById(R.id.radio_q8_h2);
-        q8Comments = findViewById(R.id.q8_comments);
+        radioButtonQ8Hyp3 = findViewById(R.id.radio_q8_h3);
+        radioButtonQ8Hyp4 = findViewById(R.id.radio_q8_h4);
         editTextQ9 = findViewById(R.id.edit_q9_h);
-        q9Comments = findViewById(R.id.q9_comments);
+        radioButtonQ10Hyp1 = findViewById(R.id.radio_q10_h1);
+        radioButtonQ10Hyp2 = findViewById(R.id.radio_q10_h2);
         radioButtonQ10Hyp3 = findViewById(R.id.radio_q10_h3);
+        radioButtonQ10Hyp4 = findViewById(R.id.radio_q10_h4);
 
         // Turn the comments visible
         q2Comments.setVisibility(View.VISIBLE);
@@ -85,6 +141,88 @@ public class ResultActivity extends AppCompatActivity
         q6Comments.setVisibility(View.VISIBLE);
         q8Comments.setVisibility(View.VISIBLE);
         q2Comments.setVisibility(View.VISIBLE);
+
+        arrayOfAnswers = getIntent().getIntArrayExtra("array");
+        Log.v("ResultActivity", "Array received: " + arrayOfAnswers[0]);
+
+        // Disable all radio buttons, check boxes and edit texts.
+        for (int i = 0; i < 4; i++)
+        {
+            if (arrayOfAnswers[i] == 1)
+            {
+                radioGroupQ1.check(R.id.radio_q1_h1);
+            }
+            radioGroupQ1.getChildAt(i).setEnabled(false);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            radioGroupQ2.getChildAt(i).setEnabled(false);
+        }
+
+        checkBoxQ3Hyp1.setEnabled(false);
+        checkBoxQ3Hyp2.setEnabled(false);
+        checkBoxQ3Hyp3.setEnabled(false);
+        checkBoxQ3Hyp4.setEnabled(false);
+
+        for (int i = 0; i < 4; i++)
+        {
+            radioGroupQ4.getChildAt(i).setEnabled(false);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            radioGroupQ5.getChildAt(i).setEnabled(false);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            radioGroupQ6.getChildAt(i).setEnabled(false);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            radioGroupQ7.getChildAt(i).setEnabled(false);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            radioGroupQ8.getChildAt(i).setEnabled(false);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            radioGroupQ10.getChildAt(i).setEnabled(false);
+        }
+
+        // Show the correct answers
+        radioButtonQ1Hyp1.setTextColor(Color.parseColor("#4CAF50"));
+        radioButtonQ2Hyp2.setTextColor(Color.parseColor("#4CAF50"));
+
+        checkBoxQ3Hyp2.setTextColor(Color.parseColor("#4CAF50"));
+        checkBoxQ3Hyp4.setTextColor(Color.parseColor("#4CAF50"));
+
+        radioButtonQ4Hyp1.setTextColor(Color.parseColor("#4CAF50"));
+        radioButtonQ5Hyp3.setTextColor(Color.parseColor("#4CAF50"));
+        radioButtonQ6Hyp1.setTextColor(Color.parseColor("#4CAF50"));
+        radioButtonQ7Hyp2.setTextColor(Color.parseColor("#4CAF50"));
+        radioButtonQ8Hyp2.setTextColor(Color.parseColor("#4CAF50"));
+
+        if (arrayOfAnswers[32] != 0)
+        {
+            editTextQ9.setText(String.valueOf(arrayOfAnswers[32]));
+
+
+            if (arrayOfAnswers[32] == 8)
+            {
+                editTextQ9.setTextColor(Color.parseColor("#4CAF50"));
+            } else
+            {
+                editTextQ9.setTextColor(Color.RED);
+            }
+        }
+
+        radioButtonQ10Hyp3.setTextColor(Color.parseColor("#4CAF50"));
     }
 
     public void emailQuizResults(View view)

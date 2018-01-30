@@ -12,12 +12,13 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Toast;
-
 import java.util.List;
 
 public class QuizActivity extends AppCompatActivity
 {
-    public static final String EXTRA_MESSAGE = "com.example.android.MESSAGE";
+    public static final String EXTRA_NAME = "name";
+    public static final String EXTRA_ARRAY = "array";
+    String name;
     ScrollView scrollView;
     RadioGroup radioGroupQ1;
     RadioGroup radioGroupQ2;
@@ -77,6 +78,10 @@ public class QuizActivity extends AppCompatActivity
 
         mContext = this;
 
+        Intent i = getIntent();
+        name = i.getStringExtra("name");
+        Log.v("QuizActivity", "Name received: " + name);
+
         scrollView = findViewById(R.id.scroll_view);
         radioGroupQ1 = findViewById(R.id.radio_group_q1);
         radioGroupQ2 = findViewById(R.id.radio_group_q2);
@@ -131,9 +136,6 @@ public class QuizActivity extends AppCompatActivity
         List<Quiz> quizList = QuizCreation.getQuizList();
         correctAnswers = 0;
 
-        // Create arrayOfAnswers
-        createArrayOfAnswers();
-
         // Identify the correct answers
         if (radioButtonQ1Hyp1.isChecked()) correctAnswers++;
         if (radioButtonQ2Hyp2.isChecked()) correctAnswers++;
@@ -173,10 +175,10 @@ public class QuizActivity extends AppCompatActivity
 
     public void goToResults(View view)
     {
+        createArrayOfAnswers();
         Intent intent = new Intent(this, ResultActivity.class);
-        //EditText editText = (EditText) findViewById(R.id.edit_text);
-        String message = "olá";//editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(EXTRA_NAME, name);
+        intent.putExtra(EXTRA_ARRAY, arrayOfAnswers);
         startActivity(intent);
     }
 
@@ -241,10 +243,10 @@ public class QuizActivity extends AppCompatActivity
         {
             Log.v("QuizActivity", "NumberFormatExcption");
         }
-        if (radioButtonQ10Hyp1.isChecked()) arrayOfAnswers[32] = 1;
-        if (radioButtonQ10Hyp2.isChecked()) arrayOfAnswers[33] = 1;
-        if (radioButtonQ10Hyp3.isChecked()) arrayOfAnswers[34] = 1;
-        if (radioButtonQ10Hyp4.isChecked()) arrayOfAnswers[35] = 1;
+        if (radioButtonQ10Hyp1.isChecked()) arrayOfAnswers[33] = 1;
+        if (radioButtonQ10Hyp2.isChecked()) arrayOfAnswers[34] = 1;
+        if (radioButtonQ10Hyp3.isChecked()) arrayOfAnswers[35] = 1;
+        if (radioButtonQ10Hyp4.isChecked()) arrayOfAnswers[36] = 1;
 
     }
 }

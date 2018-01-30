@@ -382,13 +382,11 @@
                 style="@style/question"
                 android:text="@string/q9_question" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_q9_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/question_margin"
-                android:hint="@string/guess"
-                android:inputType="number" />
+                android:layout_marginLeft="@dimen/question_margin" />
 
             <TextView
                 android:id="@+id/q9_comments"
@@ -437,22 +435,22 @@
 
             </RadioGroup>
 
+            <Button
+                android:id="@+id/button_result"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:onClick="emailQuizResults"
+                android:layout_gravity="center"
+                android:background="#5C6BC0"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/email" />
+
         </LinearLayout>
 
     </ScrollView>
-
-    <Button
-        android:id="@+id/button_result"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:onClick="emailQuizResults"
-        android:layout_gravity="center"
-        android:background="#5C6BC0"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/email" />
 
 </LinearLayout>
