@@ -2,14 +2,14 @@
     <string name="app_name">QuizApp</string>
     <string name="q1_title">NASA Missions</string>
     <string name="q1_intro">NASA has added five missions to its orbiting Earth-observing fleet in 2014 - the biggest one-year increase in more than a decade.</string>
-    <string name="q1_question">Which of the following missions was launched in that year?</string>
+    <string name="q1_question">Which of the following missions was launched in the year of 2014?</string>
     <string name="q1_hyp1">Global Precipitation Measurement</string>
     <string name="q1_hyp2">Ocean Surface Topography Mission</string>
     <string name="q1_hyp3">Tropical Rainfall Measuring Mission</string>
     <string name="q1_hyp4">Solar Radiation and Climate Experiment</string>
     <string name="q2_title">Cocoa Origins</string>
-    <string name="q2_intro">Cocoa grows best in shady, moist rain-forests which is why climate change and deforestation pose such a threat to chocolate supplies. Just two countries are responsible for over 70% of the world\'s cocoa supply.</string>
-    <string name="q2_question">Which are they?</string>
+    <string name="q2_intro">Cocoa grows best in shady, moist rain-forests which is why climate change and deforestation pose such a threat to chocolate supplies.</string>
+    <string name="q2_question">Which two countries are responsible for over 70% of the world\'s cocoa supply?</string>
     <string name="q2_hyp1">Côte d’Ivoire and Brazil</string>
     <string name="q2_hyp2">Côte d’Ivoire and Ghana</string>
     <string name="q2_hyp3">Brazil and Malaysia</string>
@@ -17,7 +17,7 @@
     <string name="q2_comment">When you buy chocolate, be sure to support farmers and the environment by purchasing Rainforest Alliance Certified products.</string>
     <string name="q3_title">Saving Endangered Species</string>
     <string name="q3_intro">In 2017, the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) added new species to its protected list. This means that global trade of these species became restricted.</string>
-    <string name="q3_question">Which are two of the new species?</string>
+    <string name="q3_question">Which species were added to the protected list?</string>
     <string name="q3_hyp1">Manta Ray</string>
     <string name="q3_hyp2">Siberian (or Amur) Tiger</string>
     <string name="q3_hyp3">Chilean Sea Bass</string>
@@ -32,7 +32,7 @@
     <string name="q4_comment">In 2005, Taiwan banned growth-promoting antibiotics and requires veterinary prescriptions to use antimicrobials for livestock. Taiwan accounts for approximately 2% of annual U.S. export sales of food animal products, primarily in beef and poultry. Learn more about the countries that have restricted antibiotic use on livestock here</string>
     <string name="q5_title">Growing Cities</string>
     <string name="q5_intro">"Population growth in our cities demands sustainable solutions for transportation, buildings and other infrastructure. One hundred years ago, 20% of the world population lived in an urban area.</string>
-    <string name="q5_question">"What will this percentage be by 2050?</string>
+    <string name="q5_question">"What will the percentage of urban population be by 2050?</string>
     <string name="q5_hyp1">45%</string>
     <string name="q5_hyp2">60%</string>
     <string name="q5_hyp3">70%</string>
@@ -55,7 +55,7 @@
     <string name="q7_hyp4">45 years</string>
     <string name="q8_title">Energy and Wildlife</string>
     <string name="q8_intro">The Ivanpah solar thermal plant in the Mohave Desert of California went online by the end of 2013. During construction, developers unexpectedly encountered nearly 200 of a particular threatened animal.</string>
-    <string name="q8_question">What was that animal?</string>
+    <string name="q8_question">What animal was threatened by the construction of the solar thermal plant?</string>
     <string name="q8_hyp1">Desert salamander</string>
     <string name="q8_hyp2">Desert tortoise</string>
     <string name="q8_hyp3">Kangaroo rat</string>

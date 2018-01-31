@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
@@ -71,7 +70,7 @@ public class ResultActivity extends AppCompatActivity
     RadioButton radioButtonQ10Hyp2;
     RadioButton radioButtonQ10Hyp3;
     RadioButton radioButtonQ10Hyp4;
-    int correctAnswers;
+    String message;
     int[] arrayOfAnswers;
 
     @Override
@@ -79,6 +78,9 @@ public class ResultActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        message = getIntent().getStringExtra("message");
+        Log.v("ResultActivity", message);
 
         q2Comments = findViewById(R.id.q2_comments);
         q4Comments = findViewById(R.id.q4_comments);
@@ -134,7 +136,7 @@ public class ResultActivity extends AppCompatActivity
         radioButtonQ10Hyp3 = findViewById(R.id.radio_q10_h3);
         radioButtonQ10Hyp4 = findViewById(R.id.radio_q10_h4);
 
-        // Turn the comments visible
+        // Turn comments visible
         q2Comments.setVisibility(View.VISIBLE);
         q4Comments.setVisibility(View.VISIBLE);
         q5Comments.setVisibility(View.VISIBLE);
@@ -143,21 +145,74 @@ public class ResultActivity extends AppCompatActivity
         q2Comments.setVisibility(View.VISIBLE);
 
         arrayOfAnswers = getIntent().getIntArrayExtra("array");
-        Log.v("ResultActivity", "Array received: " + arrayOfAnswers[0]);
+
+        // Show selected options
+        if (arrayOfAnswers[0] != -1)
+        {
+            radioGroupQ1.check(arrayOfAnswers[0]);
+        }
+        if (arrayOfAnswers[1] != -1)
+        {
+            radioGroupQ2.check(arrayOfAnswers[1]);
+        }
+        if (arrayOfAnswers[2] != 0) checkBoxQ3Hyp1.setChecked(true);
+        if (arrayOfAnswers[3] != 0) checkBoxQ3Hyp2.setChecked(true);
+        if (arrayOfAnswers[4] != 0) checkBoxQ3Hyp3.setChecked(true);
+        if (arrayOfAnswers[5] != 0) checkBoxQ3Hyp4.setChecked(true);
+        if (arrayOfAnswers[6] != -1)
+        {
+            radioGroupQ4.check(arrayOfAnswers[6]);
+        }
+        if (arrayOfAnswers[7] != -1)
+        {
+            radioGroupQ5.check(arrayOfAnswers[7]);
+        }
+        if (arrayOfAnswers[8] != -1)
+        {
+            radioGroupQ6.check(arrayOfAnswers[8]);
+        }
+        if (arrayOfAnswers[9] != -1)
+        {
+            radioGroupQ7.check(arrayOfAnswers[9]);
+        }
+        if (arrayOfAnswers[10] != -1)
+        {
+            radioGroupQ8.check(arrayOfAnswers[10]);
+        }
+        if (arrayOfAnswers[11] != 0)
+        {
+            if (arrayOfAnswers[11] == 8)
+            {
+                editTextQ9.setTextColor(Color.parseColor("#4CAF50"));
+                editTextQ9.setText(String.valueOf(arrayOfAnswers[11]) + " is the right answer.");
+            }
+            else
+            {
+                editTextQ9.setTextColor(Color.RED);
+                editTextQ9.setText(String.valueOf(arrayOfAnswers[11]) + ". The right answer is 8.");
+            }
+        }
+        else
+        {
+            editTextQ9.setTextColor(Color.parseColor("#4CAF50"));
+            editTextQ9.setText("8 is the right answer.");
+        }
+        if (arrayOfAnswers[12] != -1)
+        {
+            radioGroupQ10.check(arrayOfAnswers[12]);
+        }
 
         // Disable all radio buttons, check boxes and edit texts.
         for (int i = 0; i < 4; i++)
         {
-            if (arrayOfAnswers[i] == 1)
-            {
-                radioGroupQ1.check(R.id.radio_q1_h1);
-            }
             radioGroupQ1.getChildAt(i).setEnabled(false);
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
             radioGroupQ2.getChildAt(i).setEnabled(false);
+            radioGroupQ4.getChildAt(i).setEnabled(false);
+            radioGroupQ5.getChildAt(i).setEnabled(false);
+            radioGroupQ6.getChildAt(i).setEnabled(false);
+            radioGroupQ7.getChildAt(i).setEnabled(false);
+            radioGroupQ8.getChildAt(i).setEnabled(false);
+            radioGroupQ10.getChildAt(i).setEnabled(false);
         }
 
         checkBoxQ3Hyp1.setEnabled(false);
@@ -165,69 +220,21 @@ public class ResultActivity extends AppCompatActivity
         checkBoxQ3Hyp3.setEnabled(false);
         checkBoxQ3Hyp4.setEnabled(false);
 
-        for (int i = 0; i < 4; i++)
-        {
-            radioGroupQ4.getChildAt(i).setEnabled(false);
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
-            radioGroupQ5.getChildAt(i).setEnabled(false);
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
-            radioGroupQ6.getChildAt(i).setEnabled(false);
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
-            radioGroupQ7.getChildAt(i).setEnabled(false);
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
-            radioGroupQ8.getChildAt(i).setEnabled(false);
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
-            radioGroupQ10.getChildAt(i).setEnabled(false);
-        }
-
         // Show the correct answers
         radioButtonQ1Hyp1.setTextColor(Color.parseColor("#4CAF50"));
         radioButtonQ2Hyp2.setTextColor(Color.parseColor("#4CAF50"));
-
         checkBoxQ3Hyp2.setTextColor(Color.parseColor("#4CAF50"));
         checkBoxQ3Hyp4.setTextColor(Color.parseColor("#4CAF50"));
-
         radioButtonQ4Hyp1.setTextColor(Color.parseColor("#4CAF50"));
         radioButtonQ5Hyp3.setTextColor(Color.parseColor("#4CAF50"));
         radioButtonQ6Hyp1.setTextColor(Color.parseColor("#4CAF50"));
         radioButtonQ7Hyp2.setTextColor(Color.parseColor("#4CAF50"));
         radioButtonQ8Hyp2.setTextColor(Color.parseColor("#4CAF50"));
-
-        if (arrayOfAnswers[32] != 0)
-        {
-            editTextQ9.setText(String.valueOf(arrayOfAnswers[32]));
-
-
-            if (arrayOfAnswers[32] == 8)
-            {
-                editTextQ9.setTextColor(Color.parseColor("#4CAF50"));
-            } else
-            {
-                editTextQ9.setTextColor(Color.RED);
-            }
-        }
-
         radioButtonQ10Hyp3.setTextColor(Color.parseColor("#4CAF50"));
     }
 
     public void emailQuizResults(View view)
     {
-        String message = "You've got " + correctAnswers + " out of 10 correct answers";
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
         intent.putExtra(Intent.EXTRA_SUBJECT, "Quiz results");
