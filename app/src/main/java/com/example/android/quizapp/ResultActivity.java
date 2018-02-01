@@ -80,7 +80,7 @@ public class ResultActivity extends AppCompatActivity
         setContentView(R.layout.activity_result);
 
         message = getIntent().getStringExtra("message");
-        Log.v("ResultActivity", message);
+        if (message != null) Log.v("ResultActivity", message);
 
         q2Comments = findViewById(R.id.q2_comments);
         q4Comments = findViewById(R.id.q4_comments);

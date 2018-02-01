@@ -7,9 +7,10 @@
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginLeft="@dimen/scrollview_margins"
-        android:layout_marginRight="@dimen/scrollview_margins">
+        android:layout_marginRight="@dimen/scrollview_margins"
+        android:layout_weight="8">
 
         <LinearLayout style="@style/linear_layout">
 
@@ -20,8 +21,16 @@
 
             <TextView
                 style="@style/title"
-                android:text="@string/q1_title"
-                />
+                android:text="@string/q1_title" />
+
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/nasa" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q1_intro" />
 
             <TextView
                 android:id="@+id/textview_q1"
@@ -64,6 +73,15 @@
             <TextView
                 style="@style/title"
                 android:text="@string/q2_title" />
+
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/cocoa" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q2_intro" />
 
             <TextView
                 style="@style/question"
@@ -111,7 +129,16 @@
                 style="@style/title"
                 android:text="@string/q3_title" />
 
-           <TextView
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/species" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q3_intro" />
+
+            <TextView
                 style="@style/question"
                 android:text="@string/q3_question" />
 
@@ -146,6 +173,15 @@
             <TextView
                 style="@style/title"
                 android:text="@string/q4_title" />
+
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/antibiotics" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q4_intro" />
 
             <TextView
                 style="@style/question"
@@ -194,7 +230,16 @@
                 style="@style/title"
                 android:text="@string/q5_title" />
 
-           <TextView
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/cities" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q5_intro" />
+
+            <TextView
                 style="@style/question"
                 android:text="@string/q5_question" />
 
@@ -225,7 +270,6 @@
             </RadioGroup>
 
             <TextView
-                android:id="@+id/q5_comments"
                 style="@style/comments"
                 android:text="@string/q5_comment" />
 
@@ -240,6 +284,15 @@
             <TextView
                 style="@style/title"
                 android:text="@string/q6_title" />
+
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/waste" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q6_intro" />
 
             <TextView
                 style="@style/question"
@@ -288,6 +341,15 @@
                 style="@style/title"
                 android:text="@string/q7_title" />
 
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/leds" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q7_intro" />
+
             <TextView
                 style="@style/question"
                 android:text="@string/q7_question" />
@@ -329,6 +391,15 @@
             <TextView
                 style="@style/title"
                 android:text="@string/q8_title" />
+
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/energywildlife" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q8_intro" />
 
             <TextView
                 style="@style/question"
@@ -377,16 +448,26 @@
                 style="@style/title"
                 android:text="@string/q9_title" />
 
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/arctic" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q9_intro" />
+
             <TextView
                 style="@style/question"
                 android:text="@string/q9_question" />
 
-            <TextView
+            <EditText
                 android:id="@+id/edit_q9_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/hypothesis_textview"
-                android:layout_marginLeft="@dimen/question_margin" />
+                android:layout_marginLeft="20dp"
+                android:hint="@string/guess"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/q9_comments"
@@ -404,6 +485,15 @@
             <TextView
                 style="@style/title"
                 android:text="@string/q10_title" />
+
+            <ImageView
+                style="@style/image"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/bikecommuting" />
+
+            <TextView
+                style="@style/intro"
+                android:text="@string/q10_intro" />
 
             <TextView
                 style="@style/question"
@@ -435,19 +525,32 @@
 
             </RadioGroup>
 
-            <Button
-                android:id="@+id/button_result"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:onClick="emailQuizResults"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_gravity="center"
-                android:background="#5C6BC0"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/email" />
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_grade"
+                    style="@style/buttons"
+                    android:onClick="gradeQuiz"
+                    android:text="@string/grade" />
+
+                <Button
+                    android:id="@+id/button_reset"
+                    style="@style/buttons"
+                    android:onClick="resetQuiz"
+                    android:text="@string/reset" />
+
+                <Button
+                    android:id="@+id/button_results"
+                    style="@style/buttons"
+                    android:onClick="goToResults"
+                    android:text="@string/results" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

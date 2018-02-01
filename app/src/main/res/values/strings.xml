@@ -17,7 +17,7 @@
     <string name="q2_comment">When you buy chocolate, be sure to support farmers and the environment by purchasing Rainforest Alliance Certified products.</string>
     <string name="q3_title">Saving Endangered Species</string>
     <string name="q3_intro">In 2017, the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) added new species to its protected list. This means that global trade of these species became restricted.</string>
-    <string name="q3_question">Which species were added to the protected list?</string>
+    <string name="q3_question">Which two species were added to the protected list?</string>
     <string name="q3_hyp1">Manta Ray</string>
     <string name="q3_hyp2">Siberian (or Amur) Tiger</string>
     <string name="q3_hyp3">Chilean Sea Bass</string>

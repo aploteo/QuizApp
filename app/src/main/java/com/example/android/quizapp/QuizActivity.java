@@ -134,6 +134,13 @@ public class QuizActivity extends AppCompatActivity
 
     public void gradeQuiz(View view)
     {
+        findNumberOfCorrectAnswers();
+        buildMessage();
+        displayToast(message);
+    }
+
+    public void findNumberOfCorrectAnswers()
+    {
         List<Quiz> quizList = QuizCreation.getQuizList();
         correctAnswers = 0;
 
@@ -148,16 +155,18 @@ public class QuizActivity extends AppCompatActivity
         if (radioButtonQ8Hyp2.isChecked()) correctAnswers++;
         if (editTextQ9.getText().toString().equals("8")) correctAnswers++;
         if (radioButtonQ10Hyp3.isChecked()) correctAnswers++;
+    }
 
+    public void buildMessage()
+    {
         message = "";
-        Log.v("QuizActivity", name);
+        //Log.v("QuizActivity", name);
         if (name.length() > 0)
         {
             message = name + ", your quiz results:\n";
         }
         message += "You've got " + correctAnswers + " out of 10 correct answers";
-        if (correctAnswers != 10) message += " and " + (10 - correctAnswers) + " wrong answer(s) or unanswered question(s)";
-        displayToast(message);
+        if (correctAnswers != 10) message += " and " + (10 - correctAnswers) + " wrong or unanswered.";
     }
 
     public void resetQuiz(View view)
@@ -183,6 +192,7 @@ public class QuizActivity extends AppCompatActivity
     public void goToResults(View view)
     {
         createArrayOfAnswers();
+        buildMessage();
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra(EXTRA_MESSAGE, message);
         intent.putExtra(EXTRA_ARRAY, arrayOfAnswers);
@@ -214,9 +224,9 @@ public class QuizActivity extends AppCompatActivity
         arrayOfAnswers[0] = radioGroupQ1.getCheckedRadioButtonId();
         arrayOfAnswers[1] = radioGroupQ2.getCheckedRadioButtonId();
         if (checkBoxQ3Hyp1.isChecked()) arrayOfAnswers[2] = R.id.check_q3_h1;
-        if (checkBoxQ3Hyp2.isChecked()) arrayOfAnswers[3] = R.id.check_q3_h2;;
-        if (checkBoxQ3Hyp3.isChecked()) arrayOfAnswers[4] = R.id.check_q3_h3;;
-        if (checkBoxQ3Hyp4.isChecked()) arrayOfAnswers[5] = R.id.check_q3_h4;;
+        if (checkBoxQ3Hyp2.isChecked()) arrayOfAnswers[3] = R.id.check_q3_h2;
+        if (checkBoxQ3Hyp3.isChecked()) arrayOfAnswers[4] = R.id.check_q3_h3;
+        if (checkBoxQ3Hyp4.isChecked()) arrayOfAnswers[5] = R.id.check_q3_h4;
         arrayOfAnswers[6] = radioGroupQ4.getCheckedRadioButtonId();
         arrayOfAnswers[7] = radioGroupQ5.getCheckedRadioButtonId();
         arrayOfAnswers[8] = radioGroupQ6.getCheckedRadioButtonId();
