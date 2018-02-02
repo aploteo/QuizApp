@@ -79,8 +79,7 @@ public class QuizActivity extends AppCompatActivity
 
         mContext = this;
 
-        Intent i = getIntent();
-        name = i.getStringExtra("name");
+        name = getIntent().getStringExtra("name");
         Log.v("QuizActivity", "Name received: -" + name+"-");
 
         scrollView = findViewById(R.id.scroll_view);
@@ -163,10 +162,10 @@ public class QuizActivity extends AppCompatActivity
         //Log.v("QuizActivity", name);
         if (name.length() > 0)
         {
-            message = name + ", your quiz results:\n";
+            message = getResources().getString(R.string.message_line1, name);
         }
-        message += "You've got " + correctAnswers + " out of 10 correct answers";
-        if (correctAnswers != 10) message += " and " + (10 - correctAnswers) + " wrong or unanswered.";
+        message += getResources().getString(R.string.message_line2, correctAnswers);
+        if (correctAnswers != 10) message += getResources().getString(R.string.message_line3, (10 - correctAnswers));
     }
 
     public void resetQuiz(View view)

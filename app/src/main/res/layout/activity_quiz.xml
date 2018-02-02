@@ -464,11 +464,7 @@
 
             <EditText
                 android:id="@+id/edit_q9_h"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:hint="@string/guess"
-                android:inputType="number" />
+                style="@style/edit_text" />
 
             <TextView
                 android:id="@+id/q9_comments"

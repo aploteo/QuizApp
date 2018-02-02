@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="your_name">What\'s your name?</string>
     <string name="q1_title">NASA Missions</string>
     <string name="q1_intro">NASA has added five missions to its orbiting Earth-observing fleet in 2014 - the biggest one-year increase in more than a decade.</string>
     <string name="q1_question">Which of the following missions was launched in the year of 2014?</string>
-    <string name="q1_hyp1">Global Precipitation Measurement</string>
-    <string name="q1_hyp2">Ocean Surface Topography Mission</string>
-    <string name="q1_hyp3">Tropical Rainfall Measuring Mission</string>
-    <string name="q1_hyp4">Solar Radiation and Climate Experiment</string>
+    <string name="q1_hyp1">Global Precipitation Measurement (GPM)</string>
+    <string name="q1_hyp2">Ocean Surface Topography Mission (OSTM)</string>
+    <string name="q1_hyp3">Tropical Rainfall Measuring Mission (TRMM)</string>
+    <string name="q1_hyp4">Solar Radiation and Climate Experiment (SRCE)</string>
     <string name="q2_title">Cocoa Origins</string>
     <string name="q2_intro">Cocoa grows best in shady, moist rain-forests which is why climate change and deforestation pose such a threat to chocolate supplies.</string>
     <string name="q2_question">Which two countries are responsible for over 70% of the world\'s cocoa supply?</string>
@@ -23,7 +24,7 @@
     <string name="q3_hyp3">Chilean Sea Bass</string>
     <string name="q3_hyp4">Mountain Gorilla</string>
     <string name="q4_title">Antibiotics</string>
-    <string name="q4_intro">Although the Food and Drug Administra-tion has repeatedly stated that nontherapeutic use of antibiotics on livestock is unsafe, the US continues to allow these drugs to be used. Other countries have taken the threat more seriously.</string>
+    <string name="q4_intro">Although the Food and Drug Administration has repeatedly stated that nontherapeutic use of antibiotics on livestock is unsafe, the US continues to allow these drugs to be used. Other countries have taken the threat more seriously.</string>
     <string name="q4_question">In addition to the entire European Union, which of the following has banned growth-promoting antibiotics for livestock?</string>
     <string name="q4_hyp1">Taiwan</string>
     <string name="q4_hyp2">Australia</string>
@@ -62,7 +63,7 @@
     <string name="q8_hyp4">Blunt-nosed leopard lizard</string>
     <string name="q8_comment">After finding more tortoises than anticipated, developers relocated them to a different site with the assistance of environmental organizations. The incident illustrated why careful siting is an important part of any kind of energy development.</string>
     <string name="q9_title">The Arctic</string>
-    <string name="q9_intro">Although the countries that comprise the Arctic nations have made policy statements underlining the importance of working together, the rapid melting now taking place in the Arctic, combined with increased militarization and tensions around resources, pose a challenge to its stability. Did you know that the U.S. is considered an Arctic nation because its territory extends into the region known as the Arctic Circle?</string>
+    <string name="q9_intro">Although the countries that comprise the Arctic nations have made policy statements underlining the importance of working together, the rapid melting now taking place in the Arctic, combined with increased militarization and tensions around resources, pose a challenge to its stability. Did you know that the U.S. is considered an Arctic nation because its territory extends into the region known as the Arctic Circle? Protecting this region will require the cooperation of every Arctic nation.</string>
     <string name="q9_question">Test your knowledge: How many Arctic nations are there?</string>
     <string name="q9_hyp1">8</string>
     <string name="q9_hyp2">10</string>
@@ -70,7 +71,7 @@
     <string name="q9_hyp4">14</string>
     <string name="q9_comment">Norway, Sweden, Finland, Russia, the United States, Canada, Denmark (Greenland, and Iceland are all Arctic nations. In addition, many indigenous communities have lived in the region for thousands of years and they make up 10% of the population there. The film People of a Feather documents seven winters in the lives of one such community.</string>
     <string name="q10_title">Bike Commuting</string>
-    <string name="q10_intro">About 40% of trips in the U.S. are taken within 2 miles of home—an ideal distance for riding a bike—yet only a small fraction of people pedal to their destination. \nWhy is this? One of the biggest factors preventing people from riding bikes is concern for safety. When governments build bike lanes and paths, more people feel comfortable riding a bike.</string>
+    <string name="q10_intro">About 40% of trips in the U.S. are taken within 2 miles of home—an ideal distance for riding a bike—yet only a small fraction of people pedal to their destination.  Why is this? One of the biggest factors preventing people from riding bikes is concern for safety. When governments build bike lanes and paths, more people feel comfortable riding a bike.</string>
     <string name="q10_question">The growth in bike commuting in the past decade is a result of cities growing their bike-friendly infrastructure.By what percentage did bike commuting increase in the U.S. between 2000 and 2010?</string>
     <string name="q10_hyp1">5%</string>
     <string name="q10_hyp2">15%</string>
@@ -84,4 +85,10 @@
     <string name="guess">guess</string>
     <string name="email">send results by email</string>
     <string name="content_description">image</string>
+    <string name="message_line1">%s, your quiz results:\n</string>
+    <string name="message_line2">You\'ve got %d out of 10 correct answers\n</string>
+    <string name="message_line3"> and %d wrong or unanswered.</string>
+    <string name="edit_text1"> %d is the right answer.</string>
+    <string name="edit_text2">%d. The right answer is 8.</string>
+    <string name="edit_text3">8 is the right answer.</string>
 </resources>

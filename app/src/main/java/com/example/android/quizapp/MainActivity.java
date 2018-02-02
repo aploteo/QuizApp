@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity
 {
     public static final String EXTRA_NAME = "name";
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity
     public void goToQuiz(View view)
     {
         Intent intent = new Intent(this, QuizActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_text_name);
+        EditText editText = findViewById(R.id.edit_text_name);
         String name = editText.getText().toString();
         intent.putExtra(EXTRA_NAME, name);
         startActivity(intent);

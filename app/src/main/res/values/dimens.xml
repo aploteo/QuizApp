@@ -10,4 +10,11 @@
     <dimen name="question_margin">10dp</dimen>
     <dimen name="hypothesis_bottom_margin">10dp</dimen>
     <dimen name="question_number">40dp</dimen>
+    <dimen name="edit_margin_left">20dp</dimen>
+    <dimen name="main_text_size">25sp</dimen>
+    <dimen name="main_edit_text_width">100dp</dimen>
+    <dimen name="main_edit_text_padding">3dp</dimen>
+    <dimen name="main_image_width">300dp</dimen>
+    <dimen name="main_image_width_land">250dp</dimen>
+    <dimen name="main_image_margin_land">60dp</dimen>
 </resources>

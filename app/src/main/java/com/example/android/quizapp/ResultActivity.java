@@ -184,18 +184,18 @@ public class ResultActivity extends AppCompatActivity
             if (arrayOfAnswers[11] == 8)
             {
                 editTextQ9.setTextColor(Color.parseColor("#4CAF50"));
-                editTextQ9.setText(String.valueOf(arrayOfAnswers[11]) + " is the right answer.");
+                editTextQ9.setText(getResources().getString(R.string.edit_text1, arrayOfAnswers[11]));
             }
             else
             {
                 editTextQ9.setTextColor(Color.RED);
-                editTextQ9.setText(String.valueOf(arrayOfAnswers[11]) + ". The right answer is 8.");
+                editTextQ9.setText(getResources().getString(R.string.edit_text2, arrayOfAnswers[11]));
             }
         }
         else
         {
             editTextQ9.setTextColor(Color.parseColor("#4CAF50"));
-            editTextQ9.setText("8 is the right answer.");
+            editTextQ9.setText(getResources().getString(R.string.edit_text3));
         }
         if (arrayOfAnswers[12] != -1)
         {
