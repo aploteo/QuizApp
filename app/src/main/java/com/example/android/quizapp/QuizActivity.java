@@ -77,11 +77,11 @@ public class QuizActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        // Store the Context in this variable.
         mContext = this;
 
         // Get the name of the user from the previous activity
         name = getIntent().getStringExtra("name");
-        //Log.v("QuizActivity", "Name received: -" + name+"-");
 
         // Initialize views
         initializeViews();
