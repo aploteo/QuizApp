@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * This method is called when the image of this layout is clicked.
+     */
     public void goToQuiz(View view)
     {
         Intent intent = new Intent(this, QuizActivity.class);

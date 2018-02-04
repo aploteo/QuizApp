@@ -79,9 +79,21 @@ public class QuizActivity extends AppCompatActivity
 
         mContext = this;
 
+        // Get the name of the user from the previous activity
         name = getIntent().getStringExtra("name");
-        Log.v("QuizActivity", "Name received: -" + name+"-");
+        //Log.v("QuizActivity", "Name received: -" + name+"-");
 
+        // Initialize views
+        initializeViews();
+
+        //Log.v("MainActivity", "EditText: " + userQuizAnswer[0]);
+    }
+
+    /**
+     * This method initializes all the views.
+     */
+    public void initializeViews()
+    {
         scrollView = findViewById(R.id.scroll_view);
         radioGroupQ1 = findViewById(R.id.radio_group_q1);
         radioGroupQ2 = findViewById(R.id.radio_group_q2);
@@ -128,9 +140,11 @@ public class QuizActivity extends AppCompatActivity
         radioButtonQ10Hyp2 = findViewById(R.id.radio_q10_h2);
         radioButtonQ10Hyp3 = findViewById(R.id.radio_q10_h3);
         radioButtonQ10Hyp4 = findViewById(R.id.radio_q10_h4);
-        //Log.v("MainActivity", "EditText: " + userQuizAnswer[0]);
     }
 
+    /**
+     * This method is called when the grade button is clicked.
+     */
     public void gradeQuiz(View view)
     {
         findNumberOfCorrectAnswers();
@@ -138,6 +152,9 @@ public class QuizActivity extends AppCompatActivity
         displayToast(message);
     }
 
+    /**
+     * This method calculates the number of correct answers.
+     */
     public void findNumberOfCorrectAnswers()
     {
         List<Quiz> quizList = QuizCreation.getQuizList();
@@ -156,6 +173,9 @@ public class QuizActivity extends AppCompatActivity
         if (radioButtonQ10Hyp3.isChecked()) correctAnswers++;
     }
 
+    /**
+     * This method builds the message that appears in the toast and in the email body.
+     */
     public void buildMessage()
     {
         message = "";
@@ -168,6 +188,9 @@ public class QuizActivity extends AppCompatActivity
         if (correctAnswers != 10) message += getResources().getString(R.string.message_line3, (10 - correctAnswers));
     }
 
+    /**
+     * This method resets the radio buttons, check boxes and edit texts of the quiz.
+     */
     public void resetQuiz(View view)
     {
         radioGroupQ1.clearCheck();
@@ -188,6 +211,9 @@ public class QuizActivity extends AppCompatActivity
         //correctAnswers = 0;
     }
 
+    /**
+     * This method is called when the results button is clicked.
+     */
     public void goToResults(View view)
     {
         createArrayOfAnswers();
@@ -198,11 +224,11 @@ public class QuizActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    /*public void quitQuiz(View view)
-    {
-        finish();
-    }*/
-
+    /**
+     * This method displays the toast.
+     *
+     * @param message   is the message that appears in the toast
+     */
     public void displayToast(String message)
     {
         Context context = getApplicationContext();
@@ -212,11 +238,17 @@ public class QuizActivity extends AppCompatActivity
         toast.show();
     }
 
+    /**
+     * This method returns a context to the classes that don't extend Activity.
+     */
     public static Context getContext()
     {
         return mContext;
     }
 
+    /**
+     * This method creates an array of int with the resource id's that will be used in the next activity.
+     */
     public void createArrayOfAnswers()
     {
         arrayOfAnswers = new int[13];

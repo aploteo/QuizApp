@@ -16,7 +16,7 @@
             <!--                                            1st question -->
             <TextView
                 style="@style/question_number"
-                android:text="1" />
+                android:text="@string/one" />
 
             <TextView
                 style="@style/title"
@@ -59,7 +59,7 @@
             <!--                                            2nd question -->
             <TextView
                 style="@style/question_number"
-                android:text="2" />
+                android:text="@string/two" />
 
             <TextView
                 style="@style/title"
@@ -105,7 +105,7 @@
             <!--                                            3rd question -->
             <TextView
                 style="@style/question_number"
-                android:text="3" />
+                android:text="@string/three" />
 
             <TextView
                 style="@style/title"
@@ -141,7 +141,7 @@
 
             <TextView
                 style="@style/question_number"
-                android:text="4" />
+                android:text="@string/four" />
 
             <TextView
                 style="@style/title"
@@ -188,7 +188,7 @@
 
             <TextView
                 style="@style/question_number"
-                android:text="5" />
+                android:text="@string/five" />
 
             <TextView
                 style="@style/title"
@@ -235,7 +235,7 @@
 
             <TextView
                 style="@style/question_number"
-                android:text="6" />
+                android:text="@string/six" />
 
             <TextView
                 style="@style/title"
@@ -282,7 +282,7 @@
 
             <TextView
                 style="@style/question_number"
-                android:text="7" />
+                android:text="@string/seven" />
 
             <TextView
                 style="@style/title"
@@ -324,7 +324,7 @@
 
             <TextView
                 style="@style/question_number"
-                android:text="8" />
+                android:text="@string/eight" />
 
             <TextView
                 style="@style/title"
@@ -371,7 +371,7 @@
 
             <TextView
                 style="@style/question_number"
-                android:text="9" />
+                android:text="@string/nine" />
 
             <TextView
                 style="@style/title"
@@ -399,7 +399,7 @@
 
             <TextView
                 style="@style/question_number"
-                android:text="10" />
+                android:text="@string/ten" />
 
             <TextView
                 style="@style/title"
