@@ -20,51 +20,17 @@ public class QuizActivity extends AppCompatActivity
     public static final String EXTRA_ARRAY = "array";
     String name;
     ScrollView scrollView;
-    RadioGroup radioGroupQ1;
-    RadioGroup radioGroupQ2;
-    RadioGroup radioGroupQ4;
-    RadioGroup radioGroupQ5;
-    RadioGroup radioGroupQ6;
-    RadioGroup radioGroupQ7;
-    RadioGroup radioGroupQ8;
-    RadioGroup radioGroupQ10;
-    RadioButton radioButtonQ1Hyp1;
-    RadioButton radioButtonQ1Hyp2;
-    RadioButton radioButtonQ1Hyp3;
-    RadioButton radioButtonQ1Hyp4;
-    RadioButton radioButtonQ2Hyp1;
-    RadioButton radioButtonQ2Hyp2;
-    RadioButton radioButtonQ2Hyp3;
-    RadioButton radioButtonQ2Hyp4;
-    CheckBox checkBoxQ3Hyp1;
-    CheckBox checkBoxQ3Hyp2;
-    CheckBox checkBoxQ3Hyp3;
-    CheckBox checkBoxQ3Hyp4;
-    RadioButton radioButtonQ4Hyp1;
-    RadioButton radioButtonQ4Hyp2;
-    RadioButton radioButtonQ4Hyp3;
-    RadioButton radioButtonQ4Hyp4;
-    RadioButton radioButtonQ5Hyp1;
-    RadioButton radioButtonQ5Hyp2;
-    RadioButton radioButtonQ5Hyp3;
-    RadioButton radioButtonQ5Hyp4;
-    RadioButton radioButtonQ6Hyp1;
-    RadioButton radioButtonQ6Hyp2;
-    RadioButton radioButtonQ6Hyp3;
-    RadioButton radioButtonQ6Hyp4;
-    RadioButton radioButtonQ7Hyp1;
-    RadioButton radioButtonQ7Hyp2;
-    RadioButton radioButtonQ7Hyp3;
-    RadioButton radioButtonQ7Hyp4;
-    RadioButton radioButtonQ8Hyp1;
-    RadioButton radioButtonQ8Hyp2;
-    RadioButton radioButtonQ8Hyp3;
-    RadioButton radioButtonQ8Hyp4;
+    RadioGroup radioGroupQ1, radioGroupQ2, radioGroupQ4, radioGroupQ5, radioGroupQ6, radioGroupQ7, radioGroupQ8, radioGroupQ10;
+    RadioButton radioButtonQ1Hyp1, radioButtonQ1Hyp2, radioButtonQ1Hyp3, radioButtonQ1Hyp4;
+    RadioButton radioButtonQ2Hyp1, radioButtonQ2Hyp2, radioButtonQ2Hyp3, radioButtonQ2Hyp4;
+    CheckBox checkBoxQ3Hyp1, checkBoxQ3Hyp2, checkBoxQ3Hyp3, checkBoxQ3Hyp4;
+    RadioButton radioButtonQ4Hyp1, radioButtonQ4Hyp2, radioButtonQ4Hyp3, radioButtonQ4Hyp4;
+    RadioButton radioButtonQ5Hyp1, radioButtonQ5Hyp2, radioButtonQ5Hyp3, radioButtonQ5Hyp4;
+    RadioButton radioButtonQ6Hyp1, radioButtonQ6Hyp2, radioButtonQ6Hyp3, radioButtonQ6Hyp4;
+    RadioButton radioButtonQ7Hyp1, radioButtonQ7Hyp2, radioButtonQ7Hyp3, radioButtonQ7Hyp4;
+    RadioButton radioButtonQ8Hyp1, radioButtonQ8Hyp2, radioButtonQ8Hyp3, radioButtonQ8Hyp4;
     EditText editTextQ9;
-    RadioButton radioButtonQ10Hyp1;
-    RadioButton radioButtonQ10Hyp2;
-    RadioButton radioButtonQ10Hyp3;
-    RadioButton radioButtonQ10Hyp4;
+    RadioButton radioButtonQ10Hyp1, radioButtonQ10Hyp2, radioButtonQ10Hyp3, radioButtonQ10Hyp4;
     int correctAnswers;
     int[] arrayOfAnswers;
     String message;
@@ -85,8 +51,6 @@ public class QuizActivity extends AppCompatActivity
 
         // Initialize views
         initializeViews();
-
-        //Log.v("MainActivity", "EditText: " + userQuizAnswer[0]);
     }
 
     /**
@@ -157,7 +121,7 @@ public class QuizActivity extends AppCompatActivity
      */
     public void findNumberOfCorrectAnswers()
     {
-        List<Quiz> quizList = QuizCreation.getQuizList();
+        //List<Quiz> quizList = QuizCreation.getQuizList();
         correctAnswers = 0;
 
         // Identify the correct answers
